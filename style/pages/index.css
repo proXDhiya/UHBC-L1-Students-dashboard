@@ -1,0 +1,59 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+}
+
+header > div {
+    background-color: var(--White);
+}
+
+header > div > nav {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+header > div > nav > ul {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 150px);
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+header > div > nav > ul > li {
+    align-self: center;
+}
+
+header > div > nav > ul > li:not(:nth-child(1)) {
+    justify-self: end;
+}
+
+header > div > nav > ul > li > a {
+    text-decoration: none;
+}
+
+header > div > nav > ul > li:not(:nth-child(1)) > a {
+    color: var(--Grayish-blue);
+    transition: color 0.5s ease;
+}
+
+header > div > nav > ul > li:not(:nth-child(1)) > a::after {
+    content: '';
+    display: block;
+    width: 0;
+    margin-top: 2px;
+    height: 2px;
+    background-color: var(--Dark-blue);
+    transition: width 0.5s ease;
+}
+
+header > div > nav > ul > li:not(:nth-child(1)) > a:hover {
+    color: var(--Dark-blue);
+}
+
+header > div > nav > ul > li:not(:nth-child(1)) > a:hover::after {
+    width: 100%;
+}
