@@ -57,3 +57,7 @@ header > div > nav > ul > li:not(:nth-child(1)) > a:hover {
 header > div > nav > ul > li:not(:nth-child(1)) > a:hover::after {
     width: 100%;
 }
+
+header > main {
+    /* @TODO: Update Color*/ 
+}
